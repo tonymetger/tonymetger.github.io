@@ -32,7 +32,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.1b30d651819daff0be2eb72e29c6d7b1e8846182d31842822600174f4a20be48.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.d343487979610fc5ebc25a39e1a9a282e791a6684e4e974fc89930292b638514.css" media="all">
 
 
 
@@ -138,28 +138,187 @@
   }
 }
 </style>
-<div class="profile-container">
-  <img src="/tony_headshot.jpeg" alt="Tony Metger" class="profile-image">
-  <div class="profile-text">
+<div class=profile-container>
+  <img src=/tony_headshot.jpeg alt=Tony Metger class=profile-image>
+  <div class=profile-text>
     <h1>About</h1>
 I'm a final-year graduate student at ETH Zurich advised by Renato Renner.
-I have also spent many enjoyable months as a visiting researcher at Caltech and the Simons Institute at UC Berkeley.
-My work focuses on the interplay between quantum mechancis and theoretical computer science, with some recent directions and results described below.
-<!-- Before starting my PhD, I completed my Master's in Theoretical Physics at ETH Zurich.
-During this, I spent 6 months as a visiting student researcher at Caltech advised by Thomas Vidick.
-I have also spent a lot of (very enjoyable) time at the Simons Institute at UC Berkeley, most recently in spring 2024 for the semester on Quantum Algorithms, Complexity, and Fault Tolerance. -->
+I've also spent many enjoyable months as a visiting researcher at Caltech and the Simons Institute at UC Berkeley.
+My work focuses on the interplay between quantum mechanics, theoretical computer science, cryptography, and information theory.
 <p>I&rsquo;m always happy to talk about my research! Feel free to reach out at tmetger [at] ethz [dot] ch.</p>
   </div>
 </div>
-<h1 id="recent-research">Recent Research</h1>
-<h3 id="unitary-complexity-theory">Unitary Complexity Theory</h3>
-<p>Todo</p>
-<h3 id="random-unitaries-and-t-designs">Random Unitaries and t-designs</h3>
-<p>Todo</p>
-<h3 id="quantum-information-theory-and-cryptography">Quantum Information Theory and Cryptography</h3>
-<p>Todo</p>
-<h1 id="list-of-publications">List of Publications</h1>
-<p>Todo</p>
+<h1 id="selected-publications">Selected publications</h1>
+<p><strong><a href="https://arxiv.org/abs/2406.07478">Incompressibility and spectral gaps of random circuits</a></strong><br>
+C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.</p>
+<p><em>Summary</em>: We prove that the random walk produced by random (classical or quantum) circuits is spectrally gapped, which means it mixes very quickly. This implies that random circuits are $t$-designs in depth linear in $t$ and that random circuits are essentially incompressible, proving the <a href="https://arxiv.org/abs/1701.01107">robust Brown&ndash;Susskind conjecture</a> from quantum gravity.</p>
+<details> <summary>[full abstract]</summary> 
+<p>Random reversible and quantum circuits form random walks on the alternating group $\mathrm{Alt}(2^n)$ and unitary group $\mathrm{SU}(2^n)$, respectively, with each random gate as one step of the walk. Existing bounds on the spectral gap for the $t$-th moment of these random walks have inverse-polynomial dependence in both $n$ and $t$. We prove that the gap for random reversible circuits is $\Omega(n^{-3})$ for all $t\geq 1$, and the gap for random quantum circuits is $\Omega(n^{-3})$ for $t \leq \Theta(2^{n/2})$. Importantly, these gaps are independent of $t$ in the respective regimes. We can further improve both gaps to $n^{-1}/\mathrm{polylog}(n, t)$ for $t \leq 2^{\Theta(n)}$, which is tight up to polylog factors in $n$ and $t$. Our spectral gap results have a number of consequences:</p>
+<ol>
+<li>Random reversible circuits with $\mathcal{O}(n^4 t)$ gates form multiplicative-error $t$-wise independent (even) permutations for all $t\geq 1$; for $t \leq \Theta(2^{n/6.1})$, we show that $\tilde{\mathcal{O}}(n^2 t)$ gates suffice.</li>
+<li>Random quantum circuits with $\mathcal{O}(n^4 t)$ gates form multiplicative-error unitary $t$-designs for $t \leq \Theta(2^{n/2})$; for $t \leq \Theta(2^{2n/5})$, we show that $\tilde{\mathcal{O}}(n^2 t)$ gates suffice.</li>
+<li>The robust quantum circuit complexity of random quantum circuits grows linearly for an exponentially long time, proving the robust <a href="https://arxiv.org/abs/1701.01107">Brown&ndash;Susskind</a> <a href="https://arxiv.org/abs/1912.04297">conjecture</a>. We also show an analogous result for random reversible circuits.</li>
+</ol>
+<p>Our spectral gap bounds are proven by reducing random quantum circuits to a more structured walk: a modification of the “$PFC$ ensemble” from <a href="https://arxiv.org/abs/2404.12647">Metger et al.</a> together with an expander on the alternating group due to <a href="https://arxiv.org/abs/math/0505624">Kassabov</a>, for which we give an efficient implementation using reversible circuits. In our reduction, we approximate the structured walk with local random circuits without losing the gap, which uses tools from the study of frustration-free Hamiltonians.</p>
+</details>
+<p><strong><a href="https://arxiv.org/abs/2404.19754">Succinct arguments for QMA from standard assumptions via compiled nonlocal games</a></strong><br>
+T. Metger, A. Natarajan, and T. Zhang.<br>
+<em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
+Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>).</p>
+<p><em>Summary</em>: We construct succinct arguments for QMA, i.e. a protocol for a classical verifier to check the answer to a QMA question using a computationally bounded untrusted prover with extremely little communication.
+Our proof combines cryptographic ideas with self-testing techniques inspired by the $\mathsf{MIP}^* = \mathsf{RE}$ <a href="https://arxiv.org/abs/2001.04383">proof</a>.</p>
+<details> <summary>[full abstract]</summary> 
+<p>We construct a succinct classical argument system for $\mathsf{QMA}$, the quantum analogue of $\mathsf{NP}$, from generic and standard cryptographic assumptions. Previously, building on the prior work of <a href="https://arxiv.org/abs/1804.01082">Mahadev</a>  (FOCS ’18), <a href="https://eprint.iacr.org/2022/857">Bartusek et al.</a> (CRYPTO ’22) also constructed a succinct classical argument system for $\mathsf{QMA}$. However, their construction relied on post-quantumly secure indistinguishability obfuscation, a very strong primitive which is not known from standard cryptographic assumptions. In contrast, the primitives we use (namely, collapsing hash functions and a mild version of quantum homomorphic encryption) are much weaker and are implied by standard assumptions such as LWE. Our protocol is constructed using a general transformation which was designed by <a href="https://arxiv.org/abs/2203.15877">Kalai et al.</a> (STOC ’23) as a candidate method to compile any quantum nonlocal game into an argument system. Our main technical contribution is to analyze the soundness of this transformation when it is applied to a <em>succinct</em> self-test for Pauli measurements on maximally entangled states, the latter of which is a key component in the proof of $\mathsf{MIP}^* = \mathsf{RE}$ in quantum complexity.</p>
+</details>
+<p><strong><a href="https://arxiv.org/abs/2404.12647">Simple constructions of linear-depth t-designs and pseudorandom unitaries</a></strong><br>
+T. Metger, A. Poremba, M. Sinha, and H. Yuen.<br>
+<em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
+Contributed talk at QCrypt 2024.</p>
+<p><em>Summary</em>: We give the first construction of $t$-designs (the quantum analogue to $t$-wise independent functions) that only require depth linear in $t$, which is optimal.
+We also give the first construction of pseudorandom unitaries (the quantum analogue of pseudorandom functions) secure against general non-adaptive adversaries.
+The main technical insight for both of these results is that the product of a random permutation, random phase, and random Clifford approximates the uniform distribution on unitaries extremely well.</p>
+<details> <summary>[full abstract]</summary> 
+<p>Uniformly random unitaries, i.e., unitaries drawn from the Haar measure, have many useful properties, but cannot be implemented efficiently. This has motivated a long line of research into random unitaries that &ldquo;look&rdquo; sufficiently Haar random while also being efficient to implement. Two different notions of derandomisation have emerged: $t$-designs are random unitaries that information-theoretically reproduce the first $t$ moments of the Haar measure, and pseudorandom unitaries (PRUs) are random unitaries that are computationally indistinguishable from Haar random.</p>
+<p>In this work, we take a unified approach to constructing $t$-designs and PRUs. For this, we introduce and analyse the &ldquo;$PFC$ ensemble&rdquo;, the product of a random computational basis permutation $P$, a random binary phase operator $F$, and a random Clifford unitary $C$. We show that this ensemble reproduces exponentially high moments of the Haar measure. We can then derandomise the $PFC$ ensemble to show the following:</p>
+<ul>
+<li><strong>Linear-depth $t$-designs.</strong> We give the first construction of a (diamond-error) approximate $t$-design with circuit depth linear in $t$. This follows from the $PFC$ ensemble by replacing the random phase and permutation operators with their $2t$-wise independent counterparts.</li>
+<li><strong>Non-adaptive PRUs.</strong> We give the first construction of PRUs with non-adaptive security, i.e., we construct unitaries that are indistinguishable from Haar random to polynomial-time distinguishers that query the unitary in parallel on an arbitrary state. This follows from the $PFC$ ensemble by replacing the random phase and permutation operators with their pseudorandom counterparts.</li>
+<li><strong>Adaptive pseudorandom isometries.</strong> We show that if one considers isometries (rather than unitaries) from $n$ to $n + \omega(\log n)$ qubits, a small modification of our PRU construction achieves adaptive security, i.e., even a distinguisher that can query the isometry adaptively in sequence cannot distinguish it from Haar random isometries. This gives the first construction of adaptive pseudorandom isometries. Under an additional conjecture, this proof also extends to adaptive PRUs.</li>
+</ul>
+</details>
+<p><strong><a href="https://arxiv.org/abs/2306.13073">Unitary Complexity and the Uhlmann Transformation Problem</a></strong><br>
+J. Bostanci, Y. Efron, T. Metger, A. Poremba, L. Qian, and H. Yuen.<br>
+<strong>Long plenary talk at <a href="https://youtu.be/kb-zqj3UMG0?si=z_mAa5ZZS10JXQ8v">QIP 2024</a></strong>.</p>
+<p><em>Summary</em>: We introduce a formalism to describe the complexity of quantum state transformation problems, which are not naturally captured by decision complexity.
+We use this formalism to study a wide variety of &ldquo;fully quantum&rdquo; tasks, from breaking quantum commitments to implementing quantum communication protocols and decoding Hawking radiation.
+It turns out that these problems are connected by the <em>Uhlmann transformation problem</em>, the task of mapping different purifications of a state to each other.</p>
+<details> <summary>[full abstract]</summary> 
+<p>State transformation problems such as compressing quantum information or breaking quantum commitments are fundamental quantum tasks.
+However, their computational difficulty cannot easily be characterized using traditional complexity theory, which focuses on tasks with classical inputs and outputs.</p>
+<p>To study the complexity of such state transformation tasks, we introduce a framework for <em>unitary synthesis problems</em>, including notions of reductions and unitary complexity classes.
+We use this framework to study the complexity of transforming one entangled state into another via local operations.
+We formalize this as the <em>Uhlmann Transformation Problem</em>, an algorithmic version of Uhlmann&rsquo;s theorem.
+Then, we prove structural results relating the complexity of the Uhlmann Transformation Problem, polynomial space quantum computation, and zero knowledge protocols.</p>
+<p>The Uhlmann Transformation Problem allows us to characterize the complexity of a variety of tasks in quantum information processing, including decoding noisy quantum channels, breaking falsifiable quantum cryptographic assumptions, implementing optimal prover strategies in quantum interactive proofs, and decoding the Hawking radiation of black holes.
+Our framework for unitary complexity thus provides new avenues for studying the computational complexity of many natural quantum information processing tasks.</p>
+</details>
+<p><strong><a href="https://arxiv.org/abs/2203.04989">Generalised entropy accumulation</a></strong><br>
+T. Metger, O. Fawzi, D. Sutter, and R. Renner (ordered by contribution).<br>
+<em>FOCS 2022 (IEEE 63rd Annual Symposium on Foundations of Computer Science).</em><br>
+<strong>Plenary talk at <a href="https://youtu.be/Te0FhcJ8Wu4?si=TwHIlTRG3FuUDeDK">QIP 2023</a></strong> and contributed talk at QCrypt 2022 (<strong>Best Student Paper Prize</strong>).</p>
+<p><em>Summary</em>: We prove that quantum min-entropy &ldquo;accumulates&rdquo; in very general sequential quantum processes.
+In subsequent work, we have used our generalised entropy accumulation theorem to give the <a href="https://arxiv.org/abs/2203.04993">first general security proof</a> for prepare-and-measure QKD protocols.</p>
+<details> <summary>[full abstract]</summary> 
+<p>The min-entropy of a quantum system $A$ conditioned on another quantum system $E$ describes how much randomness can be extracted from $A$ with respect to an adversary in possession of $E$.
+This quantity plays a crucial role in quantum cryptography: the security proofs of many quantum cryptographic protocols reduce to showing a lower bound on such a min-entropy.
+Here, we develop a new tool, called <em>generalised entropy accumulation</em>, for computing such bounds.
+Concretely, we consider a sequential process in which each step outputs a system $A_i$ and updates a side information register $E$. We prove that if this process satisfies a natural &ldquo;non-signalling&rdquo; condition between past outputs and future side information, the min-entropy of the outputs $A_1, \dots, A_n$ conditioned on the  side information $E$ at the end of the process can be bounded from below by a sum of von Neumann entropies associated with the individual steps.
+This is a generalisation of the <a href="https://arxiv.org/abs/1607.01796">entropy accumulation theorem</a> (EAT), which deals with a more restrictive model of side information: there, past side information cannot be updated in subsequent rounds, and newly generated side information has to satisfy a Markov condition.</p>
+<p>Due to its more general model of side-information, our generalised EAT can be applied more easily and to a broader range of cryptographic protocols.
+In particular, it is the first general tool that is applicable to mistrustful device-independent cryptography.
+To demonstrate this, we give the first security proof for <a href="https://arxiv.org/abs/1706.04984">blind randomness expansion</a> against general adversaries.
+Furthermore, our generalised EAT can be used to give improved security proofs for <a href="https://arxiv.org/abs/2203.04993">quantum key distribution</a>, and also has applications beyond quantum cryptography.</p>
+</details>
+<h1 id="full-list-of-publications">Full list of publications</h1>
+<p>See also <a href="https://scholar.google.com/citations?hl=en&amp;user=sgcI--IAAAAJ&amp;view_op=list_works&amp;sortby=pubdate">Google Scholar</a> for a possibly more up-to-date list.</p>
+<p>(Following the convention in theoretical computer science, authors are ordered alphabetically by default. A $(\mathcal{C})$ at the end of the author list denotes ordering by contribution (as is common in physics); an $^*$ denotes joint first authorship.)</p>
+<ul>
+<li>
+<p>A. Arqand, T. Metger, and E. Tan.<br>
+<a href="https://arxiv.org/abs/2407.20396">Mutual information chain rules for security proofs robust against device imperfections.</a><br>
+Contributed talk at QCrypt 2024.</p>
+</li>
+<li>
+<p>C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.<br>
+<a href="https://arxiv.org/abs/2406.07478">Incompressibility and spectral gaps of random circuits.</a></p>
+</li>
+<li>
+<p>P. Arabadjieva, A. Gheorghiu, V. Gitton, and T. Metger.<br>
+<a href="https://arxiv.org/abs/2405.15736">Single-Round Proofs of Quantumness from Knowledge Assumptions.</a></p>
+</li>
+<li>
+<p>T. Metger, A. Natarajan, and T. Zhang.<br>
+<a href="https://arxiv.org/abs/2404.19754">Succinct arguments for QMA from standard assumptions via compiled nonlocal games.</a><br>
+<em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
+Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>).</p>
+</li>
+<li>
+<p>T. Metger, A. Poremba, M. Sinha, and H. Yuen.<br>
+<a href="https://arxiv.org/abs/2404.12647">Simple constructions of linear-depth t-designs and pseudorandom unitaries.</a><br>
+<em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
+Contributed talk at QCrypt 2024.</p>
+</li>
+<li>
+<p>A. Bouland, B. Fefferman, S. Ghosh, T. Metger, U. Vazirani, C. Zhang, and Z. Zhou.<br>
+<a href="https://arxiv.org/abs/2311.12017">Public-key pseudoentanglement and the hardness of learning ground state entanglement structure.</a><br>
+<em>CCC 2024 (39th Computational Complexity Conference).</em><br>
+Contributed talk at <a href="https://youtu.be/siteV28Fb1U?si=YwI_86-nclomK2bN">QIP 2024</a>.</p>
+</li>
+<li>
+<p>J. Bostanci, Y. Efron, T. Metger, A. Poremba, L. Qian, and H. Yuen.<br>
+<a href="https://arxiv.org/abs/2306.13073">Unitary Complexity and the Uhlmann Transformation Problem.</a><br>
+<strong>Long plenary talk at <a href="https://youtu.be/kb-zqj3UMG0?si=z_mAa5ZZS10JXQ8v">QIP 2024</a></strong>.</p>
+</li>
+<li>
+<p>T. Metger and H. Yuen.<br>
+<a href="https://arxiv.org/abs/2301.07730">stateQIP = statePSPACE.</a><br>
+<em>FOCS 2023 (IEEE 64th Annual Symposium on Foundations of Computer Science).</em><br>
+Contributed talk at <a href="https://youtu.be/O84uT7CjdNo?si=sjqmSScM7GL8spcZ">QIP 2023</a>.</p>
+</li>
+<li>
+<p>A. Anshu and T. Metger.<br>
+<a href="https://arxiv.org/abs/2209.02715">Concentration bounds for quantum states and limitations on the QAOA from polynomial approximations.</a><br>
+<em><a href="https://youtu.be/Ugwm72aWXIs?si=zHZ4b9IcUbpaZ_Pj">ITCS 2023</a> (14th Innovations in Theoretical Computer Science Conference).</em><br>
+Contributed talk at TQC 2023.</p>
+</li>
+<li>
+<p>T. Metger, R. Renner $(\mathcal{C})$.<br>
+<a href="https://doi.org/10.1038/s41467-023-40920-8">Security of quantum key distribution from generalised entropy accumulation.</a><br>
+<a href="https://doi.org/10.1038/s41467-023-40920-8"><em>Nature Communications</em> 14 (1), 5272</a>.</p>
+</li>
+<li>
+<p>T. Metger, O. Fawzi, D. Sutter, and R. Renner $(\mathcal{C})$.<br>
+<a href="https://arxiv.org/abs/2203.04989">Generalised entropy accumulation.</a><br>
+<em>FOCS 2022 (IEEE 63rd Annual Symposium on Foundations of Computer Science).</em><br>
+<strong>Plenary talk at <a href="https://youtu.be/Te0FhcJ8Wu4?si=TwHIlTRG3FuUDeDK">QIP 2023</a></strong> and contributed talk at QCrypt 2022 (<strong>Best Student Paper Prize</strong>).</p>
+</li>
+<li>
+<p>A. Gheorghiu, T. Metger, and A. Poremba.<br>
+<a href="https://arxiv.org/abs/2201.13445">Quantum cryptography with classical communication: parallel remote state preparation for copy-protection, verification, and more.</a><br>
+ICLAP 2023 (50th International Colloquium on Automata, Languages, and Programming)<br>
+Presented as a contributed talk at TQC 2022 and QCrypt 2022.</p>
+</li>
+<li>
+<p>T. Metger, Y. Dulek, A. Coladangelo, and R. Arnon-Friedman $(\mathcal{C})$.<br>
+<a href="https://doi.org/10.1088/1367-2630/ac304b">Device-independent quantum key distribution from computational assumptions.</a><br>
+<a href="https://doi.org/10.1088/1367-2630/ac304b">New J. Phys. 23 123021 (2021)</a>.</p>
+</li>
+<li>
+<p>T. Metger and T. Vidick.<br>
+<a href="https://doi.org/10.22331/q-2021-09-16-544">Self-testing of a single quantum device under computational assumptions.</a><br>
+<em>ITCS 2021 (12th Innovations in Theoretical Computer Science Conference)</em><br>
+Journal version: <a href="https://doi.org/10.22331/q-2021-09-16-544">Quantum 5, 544 (2021)</a>
+Presented as a contributed talk at TQC 2020, and as a joint contributed talk with &ldquo;Device-independent quantum key distribution from computational assumptions&rdquo; at <a href="https://youtu.be/rucd0njVUaQ?si=zTwRpWwG4GzWysHh">QIP 2021</a> and QCrypt 2021 (<strong>Best Student Paper Prize</strong>).<br>
+Featured in <a href="https://www.nature.com/articles/s41567-021-01415-9">Nature Physics</a>.</p>
+</li>
+<li>
+<p>H. Poulsen Nautrup$^*$, T. Metger$^*$, R. Iten$^*$, S. Jerbi, L. M. Trenkwalder, H. Wilming, H. Briegel, and R. Renner $(\mathcal{C})$.<br>
+<a href="https://arxiv.org/abs/2001.00593">Operationally meaningful representations of physical systems in neural networks.</a><br>
+<a href="https://doi.org/10.1088/2632-2153/ac9ae8">Mach. Learn.: Sci. Technol. 3 045025 (2022)</a>
+Contributed talk at QTML 2020.</p>
+</li>
+<li>
+<p>R. Iten, R. Moyard, T. Metger, D. Sutter, and S. Woerner $(\mathcal{C})$.<br>
+<a href="https://arxiv.org/abs/1909.05270">Exact and practical pattern matching for quantum circuit optimization.</a>
+<a href="https://doi.org/10.1145/3498325">ACM Transactions on Quantum Computing 3 (1), 1-41 (2022)</a>.</p>
+</li>
+<li>
+<p>R. Iten$^*$, T. Metger$^*$, H. Wilming, L. del Rio, and R. Renner $(\mathcal{C})$.<br>
+<a href="https://doi.org/10.1103/PhysRevLett.124.010508">Discovering physical concepts with neural networks.</a><br>
+<a href="https://doi.org/10.1103/PhysRevLett.124.010508">Phys. Rev. Lett. 124, 010508 (2020)</a>. <em>Editor&rsquo;s choice.</em><br>
+Press coverage: <a href="https://www.nature.com/articles/d41586-019-03332-7">Nature</a>, <a href="https://physics.aps.org/articles/v13/2">APS Physics Viewpoint</a>, <a href="https://physics.aps.org/articles/v13/198">APS Physics Highlights of the Year 2020</a>, <a href="https://www.technologyreview.com/2018/08/03/2435/who-needs-copernicus-if-you-have-machine-learning/">MIT Technology Review</a>, <a href="https://www.nzz.ch/wissenschaft/ki-neuronales-netz-vollzieht-die-kopernikanische-wende-ld.1529680">Neue Zürcher Zeitung (in German)</a>, <a href="https://www.lemonde.fr/sciences/article/2020/02/19/une-nouvelle-alliance-entre-la-physique-et-l-intelligence-artificielle_6030119_1650684.html">Le Monde (in French)</a>.</p>
+</li>
+</ul>
 
     
   </div>
@@ -194,6 +353,26 @@ I have also spent a lot of (very enjoyable) time at the Simons Institute at UC B
     <a href="https://github.com/tomfran/typo">tomfran/typo</a>
 </p>
 
+
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css">
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script>
+
+<script defer
+  src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
 
     </footer>
 
