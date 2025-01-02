@@ -150,8 +150,9 @@ My work focuses on the interplay between quantum mechanics, theoretical computer
 </div>
 <h1 id="selected-publications">Selected publications</h1>
 <p><strong><a href="https://arxiv.org/abs/2406.07478" target="_blank" >Incompressibility and spectral gaps of random circuits</a></strong><br>
-C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.</p>
-<p><em>Summary</em>: We prove that the random walk produced by random (classical or quantum) circuits is spectrally gapped, which means it mixes very quickly. This implies that random circuits are $t$-designs in depth linear in $t$ and that random circuits are essentially incompressible, proving the <a href="https://arxiv.org/abs/1701.01107" target="_blank" >robust Brown&ndash;Susskind conjecture</a> from quantum gravity.</p>
+C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.<br>
+<strong>Plenary talk at QIP 2025</strong>.</p>
+<p><em>Summary</em>: We resolve the spectral gap conjecture in both the classical and quantum settings, proving that the random walks produced by random classical and quantum circuits mix optimally. This implies that random circuits form optimal $t$-designs and that random circuits are essentially incompressible, proving the <a href="https://arxiv.org/abs/1701.01107" target="_blank" >robust Brown&ndash;Susskind conjecture</a> from quantum gravity.</p>
 <details> <summary>[full abstract]</summary> 
 <p>Random reversible and quantum circuits form random walks on the alternating group $\mathrm{Alt}(2^n)$ and unitary group $\mathrm{SU}(2^n)$, respectively, with each random gate as one step of the walk. Existing bounds on the spectral gap for the $t$-th moment of these random walks have inverse-polynomial dependence in both $n$ and $t$. We prove that the gap for random reversible circuits is $\Omega(n^{-3})$ for all $t\geq 1$, and the gap for random quantum circuits is $\Omega(n^{-3})$ for $t \leq \Theta(2^{n/2})$. Importantly, these gaps are independent of $t$ in the respective regimes. We can further improve both gaps to $n^{-1}/\mathrm{polylog}(n, t)$ for $t \leq 2^{\Theta(n)}$, which is tight up to polylog factors in $n$ and $t$. Our spectral gap results have a number of consequences:</p>
 <ol>
@@ -164,8 +165,8 @@ C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.</p>
 <p><strong><a href="https://arxiv.org/abs/2404.19754" target="_blank" >Succinct arguments for QMA from standard assumptions via compiled nonlocal games</a></strong><br>
 T. Metger, A. Natarajan, and T. Zhang.<br>
 <em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
-Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>).</p>
-<p><em>Summary</em>: We construct succinct arguments for QMA, i.e. a protocol for a classical verifier to check the answer to a QMA question using a computationally bounded untrusted prover with extremely little communication.
+Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>) and QIP 2025.</p>
+<p><em>Summary</em>: We construct succinct arguments for QMA, i.e., a protocol for a classical verifier to check the answer to a QMA question using a computationally bounded untrusted prover with extremely little communication.
 Our proof combines cryptographic ideas with self-testing techniques inspired by the $\mathsf{MIP}^* = \mathsf{RE}$ <a href="https://arxiv.org/abs/2001.04383" target="_blank" >proof</a>.</p>
 <details> <summary>[full abstract]</summary> 
 <p>We construct a succinct classical argument system for $\mathsf{QMA}$, the quantum analogue of $\mathsf{NP}$, from generic and standard cryptographic assumptions. Previously, building on the prior work of <a href="https://arxiv.org/abs/1804.01082" target="_blank" >Mahadev</a>  (FOCS ’18), <a href="https://eprint.iacr.org/2022/857" target="_blank" >Bartusek et al.</a> (CRYPTO ’22) also constructed a succinct classical argument system for $\mathsf{QMA}$. However, their construction relied on post-quantumly secure indistinguishability obfuscation, a very strong primitive which is not known from standard cryptographic assumptions. In contrast, the primitives we use (namely, collapsing hash functions and a mild version of quantum homomorphic encryption) are much weaker and are implied by standard assumptions such as LWE. Our protocol is constructed using a general transformation which was designed by <a href="https://arxiv.org/abs/2203.15877" target="_blank" >Kalai et al.</a> (STOC ’23) as a candidate method to compile any quantum nonlocal game into an argument system. Our main technical contribution is to analyze the soundness of this transformation when it is applied to a <em>succinct</em> self-test for Pauli measurements on maximally entangled states, the latter of which is a key component in the proof of $\mathsf{MIP}^* = \mathsf{RE}$ in quantum complexity.</p>
@@ -173,10 +174,10 @@ Our proof combines cryptographic ideas with self-testing techniques inspired by 
 <p><strong><a href="https://arxiv.org/abs/2404.12647" target="_blank" >Simple constructions of linear-depth t-designs and pseudorandom unitaries</a></strong><br>
 T. Metger, A. Poremba, M. Sinha, and H. Yuen.<br>
 <em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
-Contributed talk at QCrypt 2024.</p>
-<p><em>Summary</em>: We give the first construction of $t$-designs (the quantum analogue to $t$-wise independent functions) that only require depth linear in $t$, which is optimal.
+Contributed talk at QCrypt 2024 and QIP 2025.</p>
+<p><em>Summary</em>: We give the first construction of $t$-designs (the quantum analogue of $t$-wise independent functions) that only require circuit depth linear in $t$, which is optimal.
 We also give the first construction of pseudorandom unitaries (the quantum analogue of pseudorandom functions) secure against general non-adaptive adversaries.
-The main technical insight for both of these results is that the product of a random permutation, random phase, and random Clifford approximates the uniform distribution on unitaries extremely well.</p>
+The main technical insight for both of these results is that the product of a random permutation, a random phase, and a random Clifford approximates the uniform distribution on unitaries extremely well.</p>
 <details> <summary>[full abstract]</summary> 
 <p>Uniformly random unitaries, i.e., unitaries drawn from the Haar measure, have many useful properties, but cannot be implemented efficiently. This has motivated a long line of research into random unitaries that &ldquo;look&rdquo; sufficiently Haar random while also being efficient to implement. Two different notions of derandomisation have emerged: $t$-designs are random unitaries that information-theoretically reproduce the first $t$ moments of the Haar measure, and pseudorandom unitaries (PRUs) are random unitaries that are computationally indistinguishable from Haar random.</p>
 <p>In this work, we take a unified approach to constructing $t$-designs and PRUs. For this, we introduce and analyse the &ldquo;$PFC$ ensemble&rdquo;, the product of a random computational basis permutation $P$, a random binary phase operator $F$, and a random Clifford unitary $C$. We show that this ensemble reproduces exponentially high moments of the Haar measure. We can then derandomise the $PFC$ ensemble to show the following:</p>
@@ -191,7 +192,7 @@ J. Bostanci, Y. Efron, T. Metger, A. Poremba, L. Qian, and H. Yuen.<br>
 <strong>Long plenary talk at <a href="https://youtu.be/kb-zqj3UMG0?si=z_mAa5ZZS10JXQ8v" target="_blank" >QIP 2024</a></strong>.</p>
 <p><em>Summary</em>: We introduce a formalism to describe the complexity of quantum state transformation problems, which are not naturally captured by decision complexity.
 We use this formalism to study a wide variety of &ldquo;fully quantum&rdquo; tasks, from breaking quantum commitments to implementing quantum communication protocols and decoding Hawking radiation.
-It turns out that these problems are connected by the <em>Uhlmann transformation problem</em>, the task of mapping different purifications of a state to each other.</p>
+To analyze and unify these different tasks, we introduce the <em>Uhlmann transformation problem</em>, the task of mapping different purifications of a state to each other, which turns out to be a useful complete problem for a unitary complexity class.</p>
 <details> <summary>[full abstract]</summary> 
 <p>State transformation problems such as compressing quantum information or breaking quantum commitments are fundamental quantum tasks.
 However, their computational difficulty cannot easily be characterized using traditional complexity theory, which focuses on tasks with classical inputs and outputs.</p>
@@ -206,7 +207,7 @@ Our framework for unitary complexity thus provides new avenues for studying the 
 T. Metger, O. Fawzi, D. Sutter, and R. Renner (ordered by contribution).<br>
 <em>FOCS 2022 (IEEE 63rd Annual Symposium on Foundations of Computer Science).</em><br>
 <strong>Plenary talk at <a href="https://youtu.be/Te0FhcJ8Wu4?si=TwHIlTRG3FuUDeDK" target="_blank" >QIP 2023</a></strong> and contributed talk at QCrypt 2022 (<strong>Best Student Paper Prize</strong>).</p>
-<p><em>Summary</em>: We prove that quantum min-entropy &ldquo;accumulates&rdquo; in very general sequential quantum processes.
+<p><em>Summary</em>: We prove that quantum min-entropy &ldquo;accumulates&rdquo; in very general sequential quantum processes: the total amount of min-entropy produced in a sequential process (which is very difficult to compute directly) is bounded from below by a sum of entropies associated with single steps of the process (which are much easier to compute).
 In subsequent work, we have used our generalised entropy accumulation theorem to give the <a href="https://arxiv.org/abs/2203.04993" target="_blank" >first general security proof</a> for prepare-and-measure QKD protocols.</p>
 <details> <summary>[full abstract]</summary> 
 <p>The min-entropy of a quantum system $A$ conditioned on another quantum system $E$ describes how much randomness can be extracted from $A$ with respect to an adversary in possession of $E$.
@@ -234,7 +235,8 @@ Contributed talk at QCrypt 2024.</p>
 </li>
 <li>
 <p>C.F. Chen, J. Haah, J. Haferkamp, Y. Liu, T. Metger, and X. Tan.<br>
-<a href="https://arxiv.org/abs/2406.07478" target="_blank" >Incompressibility and spectral gaps of random circuits.</a></p>
+<a href="https://arxiv.org/abs/2406.07478" target="_blank" >Incompressibility and spectral gaps of random circuits.</a><br>
+<strong>Plenary talk at QIP 2025</strong>.</p>
 </li>
 <li>
 <p>P. Arabadjieva, A. Gheorghiu, V. Gitton, and T. Metger.<br>
@@ -245,13 +247,13 @@ Contributed talk at QCrypt 2024.</p>
 <p>T. Metger, A. Natarajan, and T. Zhang.<br>
 <a href="https://arxiv.org/abs/2404.19754" target="_blank" >Succinct arguments for QMA from standard assumptions via compiled nonlocal games.</a><br>
 <em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
-Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>).</p>
+Contributed talk at QCrypt 2024 (<strong>Best Student Paper Prize</strong>) and QIP 2025.</p>
 </li>
 <li>
 <p>T. Metger, A. Poremba, M. Sinha, and H. Yuen.<br>
 <a href="https://arxiv.org/abs/2404.12647" target="_blank" >Simple constructions of linear-depth t-designs and pseudorandom unitaries.</a><br>
 <em>FOCS 2024 (65th Annual Symposium on Foundations of Computer Science).</em><br>
-Contributed talk at QCrypt 2024.</p>
+Contributed talk at QCrypt 2024 and QIP 2025.</p>
 </li>
 <li>
 <p>A. Bouland, B. Fefferman, S. Ghosh, T. Metger, U. Vazirani, C. Zhang, and Z. Zhou.<br>
